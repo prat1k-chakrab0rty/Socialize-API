@@ -1,4 +1,5 @@
-﻿using Socialize.Domain.EntityModel;
+﻿using Socialize.Contracts.User;
+using Socialize.Domain.EntityModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Socialize.Services.BusinessInterface
     public interface IUserService
     {
         Task<List<User>> GetAll();
+        Task<User> CreateOrUpdate(CreateOrUpdateUserReq req);
     }
 }

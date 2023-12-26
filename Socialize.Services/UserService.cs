@@ -1,4 +1,5 @@
-﻿using Socialize.Data.RepositoryInterface;
+﻿using Socialize.Contracts.User;
+using Socialize.Data.RepositoryInterface;
 using Socialize.Domain.EntityModel;
 using Socialize.Services.BusinessInterface;
 using System;
@@ -21,6 +22,11 @@ namespace Socialize.Services
         public async Task<List<User>> GetAll()
         {
             var result = await _userRepository.GetAll();
+            return result;
+        }
+        public async Task<User> CreateOrUpdate(CreateOrUpdateUserReq req)
+        {
+            var result = await _userRepository.CreateOrUpdate(req);
             return result;
         }
     }

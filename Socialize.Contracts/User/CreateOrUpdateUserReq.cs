@@ -1,17 +1,16 @@
-﻿using Socialize.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Socialize.Domain.EntityModel
+namespace Socialize.Contracts.User
 {
-    public class User : BaseModel
+    public class CreateOrUpdateUserReq
     {
-        public string GoogleId { get; set; }
+        public string? GoogleId { get; set; }
         public string FullName { get; set; }
-        public string Email { get; set; }
+        public string? Email { get; set; }
         public string PhotoURL { get; set; }
         public string Bio { get; set; }
         public string Address { get; set; }
