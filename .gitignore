@@ -13,7 +13,6 @@
 
 # Visual Studio files
 .vscode/
-*.sln
 *.csproj.user
 *.vcproj
 *.vcxproj
